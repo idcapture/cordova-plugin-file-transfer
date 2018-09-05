@@ -174,6 +174,7 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
     }
 
     NSMutableURLRequest* req = [NSMutableURLRequest requestWithURL:url];
+    [req setTimeoutInterval:DBL_MAX];
 
     [req setHTTPMethod:httpMethod];
 
